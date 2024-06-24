@@ -18,7 +18,7 @@
     },
     {
       "image": "assets/images/linkedin.jpg",
-      "alt": "Slide 6"
+      "alt": "Slide 5"
     }
   ],
   
@@ -35,7 +35,7 @@
         "foto": "assets/images/vitorS.png",
         "alt": "Foto do Vitor S",
         "nome": "Victor Stransky",
-        "github": "https://github.com/vitors"
+        "github": "https://github.com/VictorStransky"
       },
       {
         "id": 3,
@@ -47,7 +47,7 @@
       {
         "id": 4,
         "foto": "assets/images/gabriel.png",
-        "alt": "Foto do Dias",
+        "alt": "Foto do Gabriel",
         "nome": "Gabriel Dias",
         "github": "https://github.com/GabrieldTostes"
       },
@@ -56,7 +56,7 @@
         "foto": "assets/images/joao.png",
         "alt": "Foto do Joao",
         "nome": "Joao Pedro",
-        "github": "https://github.com/joaopedro"
+        "github": "https://github.com/sojota"
       }
     ]
   }
