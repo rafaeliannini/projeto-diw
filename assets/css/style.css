@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333; 
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1.name {
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Cabeçalho final */
+
+main {
+  padding: 20px;
+}
+
+.quebraLinha {
+  color: black;
+}
+
+#Seção1 {
+  display: flex;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  width: 200px;
+  height: 100%;
+  height: 200px;
+}
+
+h3 {
+  margin-left: 20px;
+}
+
+p.sobre-mim {
+  margin-left: 20px;
+}
+
+p.location {
+  margin-left: 20px;
+}
+
+p.site {
+  margin-left: 20px;
+}
+
+section.icons {
+  margin-left: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+i {
+  margin-left: 20px;
+  font-size: xx-large;
+}
+
+button {
+  border: none;
+  background-color: white;
+}
+
+.carousel-container {
+  max-width: 80%; 
+  margin: 0 auto; 
+}
+
+.carousel-inner img {
+  width: 100%; 
+  height: auto; 
+}
+
+.carrossel {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrossel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200%;
+  left: 0;
+  transition: left 0.5s ease;
+}
+
+.carrossel li {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.carrossel img {
+  width: 100%;
+  height: auto;
+}
+
+.carrossel ul:hover {
+  left: -50%;
+}
+
+.seta-esquerda,
+.seta-direita {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.seta-esquerda {
+  left: 10px;
+}
+
+.seta-direita {
+  right: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+  }
+}
+
+
+
+.colegas {
+  padding: 20px;
+}
+
+.colegas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.colegas .card {
+  flex: 0 1 calc(20% - 20px); 
+  max-width: calc(20% - 20px); 
+}
+
+@media screen and (max-width: 768px) {
+  .colegas .card {
+    flex: 0 1 calc(50% - 20px);
+    max-width: calc(50% - 20px); 
+  }
+}

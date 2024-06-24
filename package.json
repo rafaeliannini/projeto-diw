@@ -1,0 +1,14 @@
+{
+  "name": "site-pessoal",
+  "version": "1.0.0",
+  "description": "Trabalho pratico final de DIW primeiro semestre",
+  "main": "index.html",
+  "scripts": {
+    "start": "json-server --watch db/db.json --port 3000",
+    "dev": "live-server"
+  },
+  "dependencies": {
+    "json-server": "^0.16.3",
+    "live-server": "^1.2.1"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "carousel": [
+    {
+      "image": "assets/images/cc.jpg",
+      "alt": "Slide 1"
+    },
+    {
+      "image": "assets/images/puc.jpg",
+      "alt": "Slide 2"
+    },
+    {
+      "image": "assets/images/cc2.jpg",
+      "alt": "Slide 3"
+    },
+    {
+      "image": "assets/images/pucigreja.jpg",
+      "alt": "Slide 4"
+    },
+    {
+      "image": "assets/images/linkedin.jpg",
+      "alt": "Slide 6"
+    }
+  ],
+  
+    "colegas": [
+      {
+        "id": 1,
+        "foto": "assets/images/julio.png",
+        "alt": "Foto do Julio",
+        "nome": "Julio Cesar",
+        "github": "https://github.com/JulioBuzzi"
+      },
+      {
+        "id": 2,
+        "foto": "assets/images/vitorS.png",
+        "alt": "Foto do Vitor S",
+        "nome": "Victor Stransky",
+        "github": "https://github.com/vitors"
+      },
+      {
+        "id": 3,
+        "foto": "assets/images/vitor.png",
+        "alt": "Foto do Vitor",
+        "nome": "Vitor Tiradentes",
+        "github": "https://github.com/VitorTss"
+      },
+      {
+        "id": 4,
+        "foto": "assets/images/gabriel.png",
+        "alt": "Foto do Dias",
+        "nome": "Gabriel Dias",
+        "github": "https://github.com/GabrieldTostes"
+      },
+      {
+        "id": 5,
+        "foto": "assets/images/joao.png",
+        "alt": "Foto do Joao",
+        "nome": "Joao Pedro",
+        "github": "https://github.com/joaopedro"
+      }
+    ]
+  }
+  
