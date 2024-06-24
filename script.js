@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetchGitHubRepos();
-    fetchCarouselData();
-    fetchColegasData();
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        fetchGitHubRepos();
+        fetchCarouselData();
+        fetchColegasData();
+    } else if (window.location.pathname.endsWith('repo.html')) {
+        loadRepoDetails();
+    }
 });
 
 function fetchGitHubRepos() {
@@ -9,11 +13,13 @@ function fetchGitHubRepos() {
     fetch(`https://api.github.com/users/${username}/repos`)
         .then(response => response.json())
         .then(repos => {
+            const reposContainer = document.getElementById('repos-container');
+            reposContainer.innerHTML = ''; // Limpa o conteúdo antes de adicionar os novos cards
+
             repos.forEach((repo, index) => {
-                const repoLink = `repo${index + 1}.html`;
                 const repoCard = `
                     <div class="card">
-                        <a href="${repoLink}" class="repo-link">
+                        <a href="repo.html" class="repo-link" data-repo-id="${index + 1}">
                             <img src="assets/images/github.png" class="card-img-top" alt="Imagem da logo github">
                         </a>
                         <div class="card-body">
@@ -25,14 +31,39 @@ function fetchGitHubRepos() {
                         </div>
                     </div>
                 `;
-                const reposContainer = document.getElementById('repos-container');
                 reposContainer.innerHTML += repoCard;
 
                 // Salva informações na sessionStorage para as páginas individuais
                 sessionStorage.setItem(`repo${index + 1}`, JSON.stringify(repo));
             });
+
+            // Adiciona event listeners aos links dos repositórios
+            document.querySelectorAll('.repo-link').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const repoId = event.currentTarget.getAttribute('data-repo-id');
+                    localStorage.setItem('selectedRepo', `repo${repoId}`);
+                });
+            });
         })
-        .catch(error => console.error('Erro ao buscar repositórios do GitHub:', error));
+        .catch(error => console.error('Erro ao buscar repositórios:', error));
+}
+
+function loadRepoDetails() {
+    const repoId = localStorage.getItem('selectedRepo');
+    const repo = JSON.parse(sessionStorage.getItem(repoId));
+
+    if (repo) {
+        const repoDetailsContainer = document.getElementById('repo-details');
+        const repoDetails = `
+            <h2>${repo.name}</h2>
+            <p>${repo.description || 'Sem descrição'}</p>
+            <p><strong>Última atualização:</strong> ${new Date(repo.updated_at).toLocaleDateString()}</p>
+            <p><a href="${repo.html_url}" class="btn btn-primary" target="_blank">Ver no GitHub</a></p>
+        `;
+        repoDetailsContainer.innerHTML = repoDetails;
+    } else {
+        document.getElementById('repo-details').innerHTML = '<p>Repositório não encontrado.</p>';
+    }
 }
 
 
