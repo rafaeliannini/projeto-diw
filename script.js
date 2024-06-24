@@ -58,7 +58,7 @@ function loadRepoDetails() {
             <h2>${repo.name}</h2>
             <p>${repo.description || 'Sem descrição'}</p>
             <p><strong>Última atualização:</strong> ${new Date(repo.updated_at).toLocaleDateString()}</p>
-            <p><a href="${repo.html_url}" class="btn btn-primary" target="_blank">Ver no GitHub</a></p>
+            <p><a href="${repo.html_url}" class="btn btn-secondary" target="_blank">Ver no GitHub</a></p>
         `;
         repoDetailsContainer.innerHTML = repoDetails;
     } else {
@@ -79,7 +79,7 @@ function fetchColegasData() {
                         <img src="${colega.foto}" class="card-img-top" alt="${colega.alt}">
                         <div class="card-body">
                             <h5 class="card-title">${colega.nome}</h5>
-                            <a href="${colega.github}" class="btn btn-primary" target="_blank">Ver GitHub</a>
+                            <a href="${colega.github}" class="btn btn-secondary" target="_blank">Ver GitHub</a>
                         </div>
                     </div>
                 `;
